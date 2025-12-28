@@ -1,11 +1,3 @@
-# Enter-terminal
-Терминал enter. версия: 281225.1b
-<img width="350" height="224" alt="изображение" src="https://github.com/user-attachments/assets/6b6f7c09-d2db-46f6-9a16-503ccc5112f3" />
-## зачем он?
-а я чо знаю? просто скучно было и решил хоть что-то написать.
-## какие команды в нём?
-введите help и не парьтесь
-## будет ли source-code?
-наверно если 5-10 челоек скачают его
-## как скачать?
-как обычный zip файл, распаковать и запустить jar-файл.
+# Enter
+## what is it for?
+This is a console with basic Linux commands. Its unique feature is that you can customize it using Java by connecting .jar modules to your terminal. One example is in the repository. Create your own modules, share them with everyone, and download other people's modules.
