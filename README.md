@@ -10,7 +10,7 @@ This is a shell with basic Linux commands. Its unique feature is that you can cu
 
 ```text
 ========================
-Enter Shell 291225.1r
+Enter Shell v311225.2r
 ========================
 
 BASIC:
@@ -32,12 +32,21 @@ FILE SYSTEM:
   cat <file>     - view file
   find <text>    - find files
 
-SYSTEM:
+SYSTEM ADMIN:
   date           - show date
   time           - show time
   whoami         - current user
   hostname       - computer name
-  ps             - running processes
+  ps             - show processes
+  kill <pid>     - kill process (simulated)
+  uptime         - system uptime
+  disk           - free disk space
+  mem            - memory usage
+  users          - show logged in users
+  netstat        - show network connections
+  top            - show running processes
+  du [dir]       - show directory size
+  env            - show environment variables
 
 TEXT:
   grep <text> <file> - search in file
