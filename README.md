@@ -1,6 +1,6 @@
 # Enter
 ## what is it for?
-This is a console with basic Linux commands. Its unique feature is that you can customize it using Java by connecting .jar modules to your terminal. One example is in the repository. Create your own modules, share them with everyone, and download other people's modules.
+This is a shell with basic Linux commands. Its unique feature is that you can customize it using Java by connecting .jar modules to your shell. One example is in the repository. Create your own modules, share them with everyone, and download other people's modules.
 
 ## Example
 <img width="650" height="232" alt="изображение" src="https://github.com/user-attachments/assets/db0c05a2-ead4-4bc9-b361-b023e57221a4" />
@@ -10,7 +10,7 @@ This is a console with basic Linux commands. Its unique feature is that you can 
 
 ```text
 ========================
-Enter Terminal 291225.1r
+Enter Shell 291225.1r
 ========================
 
 BASIC:
