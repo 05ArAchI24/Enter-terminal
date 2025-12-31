@@ -48,49 +48,49 @@ public class Main {
                 break;
             case "help":
                 System.out.println("""
-        ================================
-        Enter Terminal 291225.1r by arachi
-        ================================
-        BASIC:
-          help          - show this help
-          exit          - quit program
-          clear         - clear screen
-          enter-version - show version
-          echo <text>   - print text
-        
-        FILE SYSTEM:
-          ls            - list files
-          pwd           - current directory
-          cd <dir>      - change directory
-          mkdir <dir>   - create directory
-          touch <file>  - create file
-          rm <file>     - delete file
-          cp <s> <d>    - copy file
-          mv <s> <d>    - move/rename file
-          cat <file>    - view file
-          find <name>   - find files
-        
-        SYSTEM:
-          date          - show date
-          time          - show time
-          whoami        - current user
-          hostname      - system hostname
-          ps            - show processes
-          kill <pid>    - kill process (simulated)
-        
-        TEXT:
-          grep <p> <f>  - search in file
-        
-        ADMIN:
-          root          - enable root mode
-          root-check    - check root status
-        
-        MODULES:
-          module load <jar> <class>  - load module
-          module unload <name>       - unload module
-          module list                - list modules
-        
-        ================================
+===============================
+Enter Terminal 291225.1r by arachi
+
+BASIC:
+🆘 help          - show this help
+❌ exit          - quit program
+🧹 clear         - clear screen
+📦 enter-version - show version
+📢 echo    - print text
+
+FILE SYSTEM:
+📂 ls            - list files
+📍 pwd           - current directory
+📂 cd       - change directory
+📁 mkdir    - create directory
+📄 touch   - create file
+🗑️ rm      - delete file
+📋 cp   - copy file
+🔀 mv   - move/rename file
+👀 cat     - view file
+🔍 find    - find files
+
+SYSTEM:
+📅 date          - show date
+⏰ time          - show time
+👤 whoami        - current user
+🖥️ hostname      - system hostname
+📊 ps            - show processes
+⚡ kill     - kill process (simulated)
+
+TEXT:
+🔎 grep    - search in file
+
+ADMIN:
+🛡️ root          - enable root mode
+✅ root-check    - check root status
+
+MODULES:
+📥 module load    - load module
+📤 module unload        - unload module
+📃 module list                - list modules
+
+===============================
         """);
                 break;
             case "time":
@@ -101,7 +101,7 @@ public class Main {
                 if (parts.length > 1) {
                     mkdirCommand(parts[1]);
                 } else {
-                    System.out.println("Usage: mkdir <directory>");
+                    System.out.println("🖊️ Usage: mkdir <directory>");
                 }
                 break;
 
@@ -109,7 +109,7 @@ public class Main {
                 if (parts.length > 1) {
                     touchCommand(parts[1]);
                 } else {
-                    System.out.println("Usage: touch <file>");
+                    System.out.println("🖊️ Usage: touch <file>");
                 }
                 break;
 
@@ -117,7 +117,7 @@ public class Main {
                 if (parts.length > 1) {
                     rmCommand(parts[1]);
                 } else {
-                    System.out.println("Usage: rm <file>");
+                    System.out.println("🖊️ Usage: rm <file>");
                 }
                 break;
 
@@ -125,7 +125,7 @@ public class Main {
                 if (parts.length > 1) {
                     catCommand(parts[1]);
                 } else {
-                    System.out.println("Usage: cat <file>");
+                    System.out.println("🖊️ Usage: cat <file>");
                 }
                 break;
 
@@ -133,7 +133,7 @@ public class Main {
                 if (parts.length > 2) {
                     cpCommand(parts[1], parts[2]);
                 } else {
-                    System.out.println("Usage: cp <source> <destination>");
+                    System.out.println("🖊️ Usage: cp <source> <destination>");
                 }
                 break;
 
@@ -141,7 +141,7 @@ public class Main {
                 if (parts.length > 2) {
                     mvCommand(parts[1], parts[2]);
                 } else {
-                    System.out.println("Usage: mv <source> <destination>");
+                    System.out.println("🖊️ Usage: mv <source> <destination>");
                 }
                 break;
 
@@ -153,7 +153,7 @@ public class Main {
                 try {
                     System.out.println(java.net.InetAddress.getLocalHost().getHostName());
                 } catch (Exception e) {
-                    System.out.println("Unknown host");
+                    System.out.println("🤔 Unknown host");
                 }
                 break;
 
@@ -165,7 +165,7 @@ public class Main {
                 if (parts.length > 1) {
                     killCommand(parts[1]);
                 } else {
-                    System.out.println("Usage: kill <PID>");
+                    System.out.println("🖊️ Usage: kill <PID>");
                 }
                 break;
 
@@ -173,7 +173,7 @@ public class Main {
                 if (parts.length > 1) {
                     findCommand(parts[1]);
                 } else {
-                    System.out.println("Usage: find <filename>");
+                    System.out.println("🖊️ Usage: find <filename>");
                 }
                 break;
 
@@ -181,7 +181,7 @@ public class Main {
                 if (parts.length > 2) {
                     grepCommand(parts[1], parts[2]);
                 } else {
-                    System.out.println("Usage: grep <pattern> <file>");
+                    System.out.println("🖊️ Usage: grep <pattern> <file>");
                 }
                 break;
             case "root":
@@ -208,7 +208,7 @@ public class Main {
                 } else {
                     pathDir = System.getProperty("user.home");
                     updateCurrentDir();
-                    System.out.println("Now in: " + pathDir);
+                    System.out.println("💾 Now in: " + pathDir);
                 }
                 break;
 
@@ -225,7 +225,7 @@ public class Main {
                 for (int i = 0; i < 50; i++) System.out.println();
                 break;
             case "enter-version":
-                System.out.println("Enter Terminal v281225.1b");
+                System.out.println("🖥️ Enter Terminal v281225.1b");
                 break;
 
             case "module":
@@ -237,21 +237,21 @@ public class Main {
                 long totalMem = runtime.totalMemory() / (1024 * 1024);
                 long freeMem = runtime.freeMemory() / (1024 * 1024);
                 long usedMem = totalMem - freeMem;
-                System.out.printf("Memory: %d MB used, %d MB free, %d MB total\n", usedMem, freeMem, totalMem);
+                System.out.printf("🧠 Memory: %d MB used, %d MB free, %d MB total\n", usedMem, freeMem, totalMem);
                 break;
 
             case "disk":
                 File disk = new File("/");
                 long free = disk.getFreeSpace() / (1024 * 1024 * 1024);
                 long total = disk.getTotalSpace() / (1024 * 1024 * 1024);
-                System.out.printf("Disk: %d GB free of %d GB\n", free, total);
+                System.out.printf("💽 Disk: %d GB free of %d GB\n", free, total);
                 break;
 
             case "uptime":
                 long uptime = java.lang.management.ManagementFactory.getRuntimeMXBean().getUptime();
                 long hours = uptime / (1000 * 60 * 60);
                 long minutes = (uptime % (1000 * 60 * 60)) / (1000 * 60);
-                System.out.printf("Uptime: %d hours, %d minutes\n", hours, minutes);
+                System.out.printf("⏱️ Uptime: %d hours, %d minutes\n", hours, minutes);
                 break;
 
             case "du":
@@ -259,7 +259,7 @@ public class Main {
                 File dir_du = new File(targetDir);
 
                 if (!dir_du.exists() || !dir_du.isDirectory()) {
-                    System.out.println("Directory not found: " + targetDir);
+                    System.out.println("❌ Directory not found: " + targetDir);
                     break;
                 }
 
@@ -282,7 +282,7 @@ public class Main {
                     System.arraycopy(parts, 1, args, 0, args.length);
                     moduleCommand.execute(args);
                 } else {
-                    System.out.println("Command not found: " + cmd);
+                    System.out.println("❌ Command not found: " + cmd);
                 }
                 break;
         }
@@ -304,7 +304,7 @@ public class Main {
 
     private static void handleModuleCommand(String[] parts) {
         if (parts.length < 2) {
-            System.out.println("Usage: module [load|unload|list]");
+            System.out.println("🖊️ Usage: module [load|unload|list]");
             return;
         }
 
@@ -315,7 +315,7 @@ public class Main {
                 if (parts.length == 4) {
                     loadModule(parts[2], parts[3]);
                 } else {
-                    System.out.println("Usage: module load <jarfile> <ClassName>");
+                    System.out.println("🖊️ Usage: module load <jarfile> <ClassName>");
                 }
                 break;
 
@@ -323,12 +323,12 @@ public class Main {
                 if (parts.length == 3) {
                     unloadModule(parts[2]);
                 } else {
-                    System.out.println("Usage: module unload <ModuleName>");
+                    System.out.println("🖊️ Usage: module unload <ModuleName>");
                 }
                 break;
 
             case "list":
-                System.out.println("Loaded modules (" + loadedModules.size() + "):");
+                System.out.println("🚀 Loaded modules (" + loadedModules.size() + "):");
                 for (String name : loadedModules.keySet()) {
                     Module mod = loadedModules.get(name);
                     System.out.println("  " + name + " v" + mod.getVersion() + " by " + mod.getAuthor());
@@ -336,20 +336,20 @@ public class Main {
                 break;
 
             default:
-                System.out.println("Unknown module command: " + subcmd);
+                System.out.println("❌ Unknown module command: " + subcmd);
         }
     }
 
     private static void loadModule(String jarPath, String className) {
         try {
-            System.out.println("DEBUG: Loading " + jarPath + " class " + className);
+            System.out.println("🛠️ DEBUG: Loading " + jarPath + " class " + className);
 
             File jarFile = new File(jarPath);
             if (!jarFile.isAbsolute()) {
                 jarFile = new File(pathDir, jarPath);
             }
 
-            System.out.println("DEBUG: Full path: " + jarFile.getAbsolutePath());
+            System.out.println("🛠️ DEBUG: Full path: " + jarFile.getAbsolutePath());
 
             URL[] urls = {jarFile.toURI().toURL()};
             URLClassLoader classLoader = new URLClassLoader(urls);
@@ -375,7 +375,7 @@ public class Main {
             modules = loadedModules.size();
             System.out.println("✅ Module unloaded: " + name);
         } else {
-            System.out.println("Module not found: " + name);
+            System.out.println("❌ Module not found: " + name);
         }
     }
 
@@ -409,18 +409,18 @@ public class Main {
             currentDir = currentFile.getName();
             if (currentDir.isEmpty()) currentDir = "/";
 
-            System.out.println("now in: " + pathDir);
+            System.out.println("✅ now in: " + pathDir);
         } else {
-            System.out.println("Error 404: Directory not found: " + path);
+            System.out.println("❌ Error 404: Directory not found: " + path);
         }
     }
 
     private static void mkdirCommand(String dirName) {
         File newDir = new File(pathDir, dirName);
         if (newDir.mkdir()) {
-            System.out.println("Directory created: " + dirName);
+            System.out.println("✅ Directory created: " + dirName);
         } else {
-            System.out.println("Failed to create directory");
+            System.out.println("❌ Failed to create directory");
         }
     }
 
@@ -428,12 +428,12 @@ public class Main {
         try {
             File file = new File(pathDir, fileName);
             if (file.createNewFile()) {
-                System.out.println("File created: " + fileName);
+                System.out.println("✅ File created: " + fileName);
             } else {
-                System.out.println("File already exists");
+                System.out.println("❌ File already exists");
             }
         } catch (Exception e) {
-            System.out.println("Error creating file: " + e.getMessage());
+            System.out.println("❌ Error creating file: " + e.getMessage());
         }
     }
 
@@ -441,12 +441,12 @@ public class Main {
         File file = new File(pathDir, target);
         if (file.exists()) {
             if (file.delete()) {
-                System.out.println("Deleted: " + target);
+                System.out.println("❌ Deleted: " + target);
             } else {
-                System.out.println("Failed to delete");
+                System.out.println("❌ Failed to delete");
             }
         } else {
-            System.out.println("File not found: " + target);
+            System.out.println("❌ File not found: " + target);
         }
     }
 
@@ -459,7 +459,7 @@ public class Main {
             }
             fileScanner.close();
         } catch (Exception e) {
-            System.out.println("Error reading file: " + e.getMessage());
+            System.out.println("❌ Error reading file: " + e.getMessage());
         }
     }
 
@@ -473,9 +473,9 @@ public class Main {
                     dstFile.toPath(),
                     java.nio.file.StandardCopyOption.REPLACE_EXISTING
             );
-            System.out.println("Copied: " + source + " → " + dest);
+            System.out.println("✅ Copied: " + source + " → " + dest);
         } catch (Exception e) {
-            System.out.println("Error copying: " + e.getMessage());
+            System.out.println("❌ Error copying: " + e.getMessage());
         }
     }
 
@@ -484,9 +484,9 @@ public class Main {
         File dstFile = new File(pathDir, dest);
 
         if (srcFile.renameTo(dstFile)) {
-            System.out.println("Moved: " + source + " → " + dest);
+            System.out.println("✅ Moved: " + source + " → " + dest);
         } else {
-            System.out.println("Failed to move");
+            System.out.println("❌ Failed to move");
         }
     }
 
@@ -527,19 +527,19 @@ public class Main {
             }
             scanner.close();
         } catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
+            System.out.println("❌ Error: " + e.getMessage());
         }
     }
 
     public static void setRoot() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("(enter) root passwd: ");
+        System.out.print("(enter) root passwd: 👀");
         String passwd_us = sc.nextLine();
         if (passwd_us.equals(rootpsd)) {
             root = true;
-            System.out.println("Root enable");
+            System.out.println("🛡️ Root enable");
         } else {
-            System.out.println("Error: 072");
+            System.out.println("❌ Error: 072");
         }
     }
 }
